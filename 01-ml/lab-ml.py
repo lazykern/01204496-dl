@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score
 from sklearn.ensemble import RandomForestClassifier
+
 # from lightgbm import LGBMClassifier
 
 # Data Preparation
@@ -41,6 +42,7 @@ for col in categorical_cols:
 #     print(encoder, encoders[encoder].classes_)
 
 # Missing Value Analysis
+
 df = df.ffill()
 
 # ML
@@ -68,10 +70,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 # model = LGBMClassifier(**params, verbose=-1)
 
 params = {
-    "n_estimators": 121,
-    "max_depth": 11,
-    "min_samples_split": 102,
-    "min_samples_leaf": 10,
+    "n_estimators": 35,
+    "max_depth": 12,
+    "min_samples_split": 114,
+    "min_samples_leaf": 6,
     "max_features": None,
     "random_state": 42,
 }
